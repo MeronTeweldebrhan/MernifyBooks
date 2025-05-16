@@ -56,9 +56,8 @@ mernify-Books/
 ├── docs/ # Design and planning documents
 └── README.md
 ## 📌 Author
-
-**Your Name**  
-Software Engineer | MERN Stack Developer
+ 
+ * Meron Teweldebrhan | Full Stack Developer
 
 ---
 
