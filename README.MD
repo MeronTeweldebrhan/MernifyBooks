@@ -32,6 +32,17 @@ While the initial build uses **MongoDB** (NoSQL) for speed and flexibility, the 
   - Journal Entries
   - Financial Reports (Balance Sheet, Income Statement, etc.)
 
+  ## 🔧 Automated Features
+- 💳 Bank Feed & Transaction Import – Auto-sync and categorize transactions.
+- 🧾 Invoice & Recurring Billing – Generate and schedule invoices automatically.
+- 📸 Receipt Scanning – Scan and auto-match expenses using OCR.
+- 🧮 Smart Reconciliation – Match transactions and simplify account balancing.
+- 📊 Tax & Financial Reports – Auto-calculate taxes and generate reports.
+- 👩‍💼 Payroll Automation – Automate salaries, tax withholdings, and payslip generation.
+- 🗓️ Report Scheduling – Auto-generate and email key financial reports (P&L, Balance Sheet).
+- 🚨 Smart Alerts – Notify users of due payments, low balances, and unusual activity.
+
+
 ## 🛠 Planned Features
 
 - Double-entry accounting system
