@@ -2,8 +2,9 @@
 const express = require('express');
 const router = express.Router();
 const { createAccount, getAccounts } = require('../controllers/accountController');
+const { protect } = require('../middleware/authMiddleware');
 
-router.post('/', createAccount);
-router.get('/', getAccounts);
+router.post('/', protect, createAccount);
+router.get('/', protect, getAccounts);
 
 module.exports = router;
