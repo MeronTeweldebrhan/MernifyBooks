@@ -20,5 +20,35 @@ const getTransactions = async (req, res) => {
     res.status(500).json({ message: error.message });
   }
 };
+// Update transaction
+const updateTransaction = async (req, res) => {
+  const { id } = req.params;
+  const { account, type, amount } = req.body;
+  if (!account || !type || !amount) {
+    return res.status(400).json({ message: 'account, type, and amount are required.' });
+  }
+  try {
+    const transaction = await Transaction.findByIdAndUpdate(id, req.body, { new: true, runValidators: true });
+    if (!transaction) {
+      return res.status(404).json({ message: 'Transaction not found' });
+    }
+    res.json(transaction);
+  } catch (error) {
+    res.status(400).json({ message: error.message });
+  }
+};
 
-module.exports = { createTransaction, getTransactions };
+// Delete transaction
+const deleteTransaction = async (req, res) => {
+  const { id } = req.params;
+  try {
+    const transaction = await Transaction.findByIdAndDelete(id);
+    if (!transaction) {
+      return res.status(404).json({ message: 'Transaction not found' });
+    }
+    res.json({ message: 'Transaction deleted',transaction });
+  } catch (error) {
+    res.status(400).json({ message: error.message });
+  }
+};
+module.exports = { createTransaction, getTransactions,updateTransaction,deleteTransaction };
