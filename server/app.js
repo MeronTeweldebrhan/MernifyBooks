@@ -4,6 +4,7 @@ const cors = require('cors');
 
 const accountRoutes =require('./routes/accountRoutes')
 const transactionRoutes = require('./routes/transactionRoutes');
+const authRoutes = require('./routes/authRoutes');
 
 
 
@@ -16,6 +17,7 @@ app.use(express.json());
 
 app.use('/api/accounts', accountRoutes);
 app.use('/api/transactions', transactionRoutes);
+app.use('/api/auth', authRoutes);
 
 // Sample route
 app.get('/', (req, res) => {
