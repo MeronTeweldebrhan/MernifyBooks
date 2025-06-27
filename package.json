@@ -4,6 +4,8 @@
   "description": "A full-featured accounting software solution built with the MERN stack, designed for modern finance teams and small businesses.",
   "main": "index.js",
   "scripts": {
+    "start": "node server/server.js",
+    "dev": "nodemon server/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -23,5 +25,8 @@
     "express": "^5.1.0",
     "mongodb": "^6.17.0",
     "mongoose": "^8.15.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
   }
 }
