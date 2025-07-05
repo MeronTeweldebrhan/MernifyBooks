@@ -20,11 +20,16 @@
   },
   "homepage": "https://github.com/MeronTeweldebrhan/MernifyBooks#readme",
   "dependencies": {
+    "@tailwindcss/vite": "^4.1.11",
     "cors": "^2.8.5",
     "dotenv": "^16.5.0",
     "express": "^5.1.0",
+    "jwt-decode": "^4.0.0",
     "mongodb": "^6.17.0",
-    "mongoose": "^8.15.1"
+    "mongoose": "^8.15.1",
+    "react-router-dom": "^7.6.3",
+    "react-toastify": "^11.0.5",
+    "tailwindcss": "^4.1.11"
   },
   "devDependencies": {
     "nodemon": "^3.1.10"
