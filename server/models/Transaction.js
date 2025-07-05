@@ -3,8 +3,10 @@ const mongoose = require('mongoose');
 
 const transactionSchema = new mongoose.Schema(
   {
-    account: { type: mongoose.Schema.Types.ObjectId, ref: 'Account', required: true },
-    type: { type: String, enum: ['debit', 'credit'], required: true },
+    fromAccount: { type: mongoose.Schema.Types.ObjectId, ref: 'Account', required: true },
+    toAccount: { type: mongoose.Schema.Types.ObjectId, ref: 'Account', required: true },
+    fromType: { type: String, enum: ['debit', 'credit'], required: true },
+    toType: { type: String, enum: ['debit', 'credit'], required: true },
     amount: { type: Number, required: true },
     description: { type: String },
     date: { type: Date, default: Date.now }
